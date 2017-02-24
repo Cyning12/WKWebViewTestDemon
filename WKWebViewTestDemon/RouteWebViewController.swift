@@ -51,6 +51,7 @@ class RouteWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate
         self.webView.loadFileURL(fileUrl, allowingReadAccessTo: fileUrl)
         
     }
+    //TODO: - finish it
     //MARK: - WKUIDelegate
     
     func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) {
@@ -64,6 +65,8 @@ class RouteWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate
         print("webView run JS: \(message) ")
         completionHandler()
     }
+    
+    
 
     
     //MARK: - WKNavigationDelegate

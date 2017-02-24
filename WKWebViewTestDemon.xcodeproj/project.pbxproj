@@ -166,6 +166,7 @@
 				EDDFCCC71E5EE2D70011814F /* Sources */,
 				EDDFCCC81E5EE2D70011814F /* Frameworks */,
 				EDDFCCC91E5EE2D70011814F /* Resources */,
+				ED612FE11E5FDCEC00C6A4A1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -288,6 +289,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ED612FE11E5FDCEC00C6A4A1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:|WARNING\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EDDFCCC71E5EE2D70011814F /* Sources */ = {
@@ -541,6 +558,7 @@
 				EDDFCCF51E5EE2D70011814F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EDDFCCF61E5EE2D70011814F /* Build configuration list for PBXNativeTarget "WKWebViewTestDemonTests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +567,7 @@
 				EDDFCCF81E5EE2D70011814F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EDDFCCF91E5EE2D70011814F /* Build configuration list for PBXNativeTarget "WKWebViewTestDemonUITests" */ = {
 			isa = XCConfigurationList;
@@ -557,6 +576,7 @@
 				EDDFCCFB1E5EE2D70011814F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
