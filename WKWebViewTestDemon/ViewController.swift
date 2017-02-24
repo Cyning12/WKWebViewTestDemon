@@ -21,5 +21,10 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func gotoWeb(_ sender: UIButton) {
+        let webViewController = UIStoryboard.init(name: "RouteWebViewController", bundle: nil).instantiateInitialViewController()
+        let navgationController = UINavigationController.init(rootViewController: webViewController!)
+        self.present(navgationController, animated: true, completion: nil)
+    }
 }
 
